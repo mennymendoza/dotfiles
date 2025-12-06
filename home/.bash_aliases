@@ -18,6 +18,8 @@ alias lg="lazygit"
 if command -v tmux &> /dev/null &&
 	[[ -n "$PS1" ]] &&
 	[[ ! "$TERM" =~ (screen|tmux) ]] &&
-	[[ -z "$TMUX" ]]; then
-	tmux new-session -A -s main
+	[[ -z "$TMUX" ]] &&
+	[[ -z "$NO_TMUX" ]];
+then
+	exec tmux new-session -A -s main
 fi
