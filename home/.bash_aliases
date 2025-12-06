@@ -14,3 +14,10 @@ alias enotes="nvim ~/dev/notes.md"
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 alias lg="lazygit"
 
+# Automatically opens tmux
+if command -v tmux &> /dev/null &&
+	[[ -n "$PS1" ]] &&
+	[[ ! "$TERM" =~ (screen|tmux) ]] &&
+	[[ -z "$TMUX" ]]; then
+	tmux new-session -A -s main
+fi
