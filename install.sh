@@ -3,8 +3,9 @@
 # Grabs the directory of the install script
 DOTFILES_DIR="$(dirname "$(realpath "$0")")"
 
-# Overwrites file in home directory
+# Creates symlinks
 ln -sf "$DOTFILES_DIR/home/.tmux.conf" ~/.tmux.conf
 ln -sf "$DOTFILES_DIR/home/.bash_aliases" ~/.bash_aliases
 ln -sf "$DOTFILES_DIR/config/lazygit/config.yml" ~/.config/lazygit/config.yml
+ln -sf "$DOTFILES_DIR/config/opencode/AGENTS.md" ~/.config/opencode/AGENTS.md
 
