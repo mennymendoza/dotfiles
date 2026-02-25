@@ -2,9 +2,7 @@
 My dots
 
 ## Installation
-If you're looking for installation instructions for `kickstart.nvim`, you can find them [here](https://github.com/nvim-lua/kickstart.nvim).
-
-These are detailed instructions for installing my Neovim configuration on Ubuntu; the installation will vary on other non-Debian based Linux distributions.
+These are detailed instructions for installing my dotfiles on Ubuntu; the installation will vary on other non-Debian based Linux distributions.
 
 1. Install [Homebrew](https://brew.sh/).
 
@@ -32,17 +30,17 @@ sudo apt-get install git make unzip build-essential xclip ripgrep
 
 5. Install a [Nerd Font](https://www.nerdfonts.com/). `kickstart.nvim` does not require you to install a Nerd Font but this configuration assumes you have one installed by default.
 
-6. Run the following command to clone this repository as your Neovim configuration.
-```bash
-git clone https://github.com/mennymendoza/mendoza.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-```
-
-7. Run the following command to get some helpful aliases.
+6. Run the following command to get some helpful aliases.
 ```bash
 cat >> ~/.bashrc << EOF
 alias notes="cat ~/dev/notes.md"
 alias enotes="nvim ~/dev/notes.md"
 EOF
+```
+
+7. Run the convenience script to install all config files/directories as symlinks.
+```bash
+./install.sh
 ```
 
 ## Recommendations
