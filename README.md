@@ -28,7 +28,9 @@ sudo apt-get install git make unzip build-essential xclip ripgrep
 * [Claude Code](https://claude.com/product/claude-code): Agentic AI CLI tool
 * [LazyGit](https://github.com/jesseduffield/lazygit): Git TUI tool
 
-7. Run the convenience script to install all config files/directories as symlinks.
+7. I also like to use [cwalk](https://github.com/ashish0kumar/cwalk) as a tmux screensaver.
+
+8. Run the convenience script to install all config files/directories as symlinks.
 ```bash
 ./install.sh
 ```
