@@ -22,8 +22,10 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 vim.o.scrolloff = 10
 vim.o.confirm = true
+vim.o.winborder = 'rounded'
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>ld', vim.diagnostic.open_float, { desc = 'Open [L]SP [D]iagnostic Window' })
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
@@ -96,6 +98,7 @@ require('lazy').setup({
         { '<leader>s', group = '[S]earch' },
         { '<leader>d', group = '[D]ebug' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>l', group = '[L]SP', mode = { 'n' } },
       },
     },
   },
@@ -202,6 +205,8 @@ require('lazy').setup({
           map('grd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
           map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+
+          map('<leader>lf', vim.lsp.buf.hover, '[L]SP [F]loating Window')
 
           map('gO', require('telescope.builtin').lsp_document_symbols, 'Open Document Symbols')
 
