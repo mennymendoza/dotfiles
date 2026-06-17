@@ -260,10 +260,10 @@ include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "
         # the inner affects spacing around each view
         # the outer affects the spacing around each workspace
         # To reduce or remove outer gaps, outer gaps can be set to a negative value.
-        gaps inner 5
-        gaps outer 5
-        gaps top 5
-        gaps bottom 5
+        gaps inner 12
+        gaps outer 12
+        gaps top 12
+        gaps bottom 12
 
         # Hide gaps when there is only 1 window
         #smart_gaps on
